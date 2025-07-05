@@ -1,0 +1,44 @@
+{
+	"name" : "AccountingToolsAccountshierarchies",
+	"display_name" : "Accounting Accounts Hierarchies",
+	"description" : "<p>Accounting accounts hierarchies package to manage different accounts hierarchies</p>",
+	"module_type" : "packages",
+	"app_type" : "fintech",
+	"category" : "tools",
+	"version" : "0.0.0",
+	"repo" : "https://github.com/sp-fintech/fintech-packages-tools-accountingtoolsaccountshierarchies",
+	"class" : "Apps\\Fintech\\Packages\\Accounting\\Tools\\Accountshierarchies\\AccountingToolsAccountshierarchies",
+	"dependencies" : 
+	{
+		"core" : 
+		{
+			"name" : "Core",
+			"version" : "0.0.0-rc.14",
+			"repo" : "https://github.com/sp-framework/core"
+		},
+		"apptype" : 
+		{
+			"name" : "Fintech",
+			"version" : "0.3.0",
+			"repo" : "https://github.com/sp-fintech/fintech"
+		},
+		"packages" : [],
+		"middlewares" : [],
+		"externals" : 
+		{
+			"composer" : 
+			{
+				"require" : []
+			},
+			"config" : 
+			{
+				"allow-plugins" : []
+			},
+			"extra" : 
+			{
+				"patches" : []
+			}
+		}
+	},
+	"settings" : []
+}
