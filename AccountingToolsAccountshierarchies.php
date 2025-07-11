@@ -20,8 +20,7 @@ class AccountingToolsAccountshierarchies extends BasePackage
         $accountingaccountshierarchies = $this->getById($id);
 
         if ($accountingaccountshierarchies) {
-            //
-            $this->addResponse('Success');
+            $this->addResponse('Success', 0, ['hierarchy' => $accountingaccountshierarchies]);
 
             return;
         }
@@ -65,18 +64,23 @@ class AccountingToolsAccountshierarchies extends BasePackage
         return false;
     }
 
-    public function removeAccountingAccountshierarchies($data)
+    public function removeAccountingAccountshierarchies($id)
     {
         $accountingaccountshierarchies = $this->getById($id);
 
-        if ($accountingaccountshierarchies) {
-            //
+        if (!$accountingaccountshierarchies) {
+            $this->addResponse('Hierarchy not found', 1);
+
+            return false;
+        }
+
+        if ($this->remove($accountingaccountshierarchies['id'])) {
             $this->addResponse('Success');
 
             return;
         }
 
-        $this->addResponse('Error', 1);
+        $this->addResponse('Error removing Hierarchy', 1);
     }
 
     public function processGnucashAccounts()
